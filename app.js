@@ -71,7 +71,7 @@ client.on(Events.InteractionCreate, async interaction => {
 });
 
 client.on(Events.MessageCreate, message => {
-  if(message.author.id == "1077626705344208996") return;
+  if(message.author.id == "1077626705344208996") return; //Id del BotMir
 
   if(message.guildId){
     let respuesta = null;
@@ -81,7 +81,7 @@ client.on(Events.MessageCreate, message => {
       case "ignacio": respuesta="Lider TI que se ejercita mucho"; break;
       case "eduardo": respuesta="CTO que le gusta dar latigazos (y también recibir)"; break;
       case "matias": respuesta="Lider Arquitectura sociable que baila (sujeto raro en el mundo TI)"; break;
-      case "santiago": respuesta="Lider DevOps fanatico de Derco y córdobes"; break;
+      case "santiago": respuesta="Lider DevOps fanatico de Derco y el fernet"; break;
       case "amir": respuesta="Lider QA, IA avanzada capaz de tener trabajo en el mundo real"; break;
       case "cristian": respuesta="Lider FullStack y equipo, amo y señor de Humantech"; break;
     }
