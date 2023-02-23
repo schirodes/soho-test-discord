@@ -73,10 +73,21 @@ client.on(Events.InteractionCreate, async interaction => {
 client.on(Events.MessageCreate, message => {
   if(message.author.id == "1077626705344208996") return;
 
-  console.log(message);
   if(message.guildId){
-    if(message.content.toLowerCase() == "que miras"){
-      message.reply({content: "Bobo" });
+    let respuesta = null;
+    switch(message.content.toLowerCase()){
+      case "que miras": respuesta="Bobo"; break;
+      case "david": respuesta="Lider Backend con cara de boludo"; break;
+      case "ignacio": respuesta="Lider TI que se ejercita mucho"; break;
+      case "eduardo": respuesta="CTO que le gusta dar latigazos (y también recibir)"; break;
+      case "matias": respuesta="Lider Arquitectura sociable que baila (sujeto raro en el mundo TI)"; break;
+      case "santiago": respuesta="Lider DevOps fanatico de Derco y córdobes"; break;
+      case "amir": respuesta="Lider QA, IA avanzada capaz de tener trabajo en el mundo real"; break;
+      case "cristian": respuesta="Lider FullStack y equipo, amo y señor de Humantech"; break;
+    }
+
+    if(respuesta){
+      message.reply(respuesta);
     }
   }
   else{
