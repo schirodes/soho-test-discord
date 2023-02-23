@@ -3,8 +3,15 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('amirbot')
-		.setDescription('Probando amir bot!'),
+		.setDescription('Probando amir bot!')
+		.addStringOption(option =>
+			option
+				.setName("texto")
+				.setDescription("Texto a replicar")
+				.setRequired(false)
+		),
 	async execute(interaction) {
-		await interaction.reply('Hola soy Amir!');
+		const texto = interaction.options.getString("texto") ?? null;
+		await interaction.reply(`Hola soy Amir!${texto ? (" Tu texto es: "+texto) : ""}`);
 	},
 };
